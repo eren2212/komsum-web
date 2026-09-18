@@ -6,6 +6,7 @@ import TermsOfUse from "./pages/TermsOfUse";
 import KvkkSozlesmesi from "./pages/KvkkSozlesmesi";
 import NotFound from "./pages/NotFound";
 import PageTransitionOverlay from "./components/PageTransitionOverlay";
+import ChatWidget from "./components/ChatWidget";
 
 export default function App() {
   const location = useLocation();
@@ -36,6 +37,7 @@ export default function App() {
           onDone={() => setTransitioning(false)}
         />
       )}
+      <ChatWidget />
     </>
   );
 }
