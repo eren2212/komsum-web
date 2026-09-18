@@ -1,7 +1,11 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 
-const MODEL_NAME = "gemini-2.5-flash";
+// gemini-2.5-flash was sunset for new accounts (404 "no longer available to
+// new users"); this is the flash-tier model Google's own API error pointed
+// to as the replacement. The "-latest" alias was tried too but returned
+// 503s under load, so this pins to a specific model instead.
+const MODEL_NAME = "gemini-3.6-flash";
 
 const SYSTEM_INSTRUCTION = `Sen Komşum uygulamasının tanıtım sitesindeki dijital komşusun ve müşteri asistanısın.
 
@@ -91,21 +95,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     .slice(-MAX_HISTORY_TURNS);
 
   try {
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({
-      model: MODEL_NAME,
-      systemInstruction: SYSTEM_INSTRUCTION,
-    });
+    const ai = new GoogleGenAI({ apiKey });
 
-    const chat = model.startChat({
+    const chat = ai.chats.create({
+      model: MODEL_NAME,
+      config: { systemInstruction: SYSTEM_INSTRUCTION },
       history: history.map((turn) => ({
         role: turn.role,
         parts: [{ text: turn.text }],
       })),
     });
 
-    const result = await chat.sendMessage(message);
-    const reply = result.response.text();
+    const result = await chat.sendMessage({ message });
+    const reply = result.text;
+
+    if (!reply) {
+      throw new Error("Gemini boş yanıt döndürdü.");
+    }
 
     return res.status(200).json({ reply });
   } catch (err: unknown) {
