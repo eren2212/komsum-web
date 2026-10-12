@@ -1,0 +1,54 @@
+SELAMKOMŞU KİŞİSEL VERİLERİN KORUNMASI VE İŞLENMESİ SÖZLEŞMESİ
+
+1. Taraflar
+İşbu Kişisel Verilerin Korunması ve İşlenmesi Sözleşmesi ("Sözleşme"), bir tarafta veri sorumlusu sıfatını haiz Eren İridere (bundan böyle "SelamKomşu", "Platform" veya "Veri Sorumlusu" olarak anılacaktır) ile diğer tarafta platforma üye olan/kullanan Kullanıcı (bundan böyle "Kullanıcı" veya "İlgili Kişi" olarak anılacaktır) arasında, aşağıda belirtilen şartlar dahilinde akdedilmiştir.
+
+2. Sözleşmenin Konusu ve Amacı
+İşbu Sözleşme'nin konusu; Kullanıcı'nın Platform'u kullanımı sırasında elde edilen kişisel verilerinin, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK"), ilgili ikincil mevzuat ve emsal yargı/kurul kararları çerçevesinde işlenmesi, aktarılması, güvenliğinin sağlanması ve tarafların bu kapsamdaki hak ve yükümlülüklerinin belirlenmesidir.
+
+3. İşlenen Veri Kategorileri ve İşleme Amaçları
+Platform, Kullanıcı'ya ait verileri "belirli, açık ve meşru amaçlar için" ve "işlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma" ilkelerine uygun olarak işlemektedir.
+
+3.1. Kullanıcı Hesap ve Profil Bilgileri
+- E-posta Adresi ve Ad-Soyad: Sözleşmenin ifası, hesap oluşturulması ve iletişim amacıyla işlenmektedir.
+- Şifre: Düz metin olarak tutulmamakta, kriptografik yöntemlerle (hash'lenmiş olarak) şifrelenerek saklanmaktadır.
+- Profil Fotoğrafı ve Biyografi: Kullanıcının tamamen kendi özgür iradesiyle (isteğe bağlı) sisteme yüklediği bu veriler, platform içi etkileşimi sağlamak amacıyla açık rızaya dayalı olarak işlenmektedir.
+
+3.2. Konum Verisi (Ayrıştırılmış İşleme Modeli)
+Konum verileri, ölçülülük ilkesi gereği iki bağımsız kategoriye ayrılmıştır:
+- Beyan Edilen Mahalle Bilgisi (Statik): Kullanıcının kayıt sırasında kendi beyanıyla seçtiği, GPS koordinatı içermeyen bölge bilgisidir. Veritabanında saklanır; Kullanıcı tarafından profilden değiştirilebilir.
+- Canlı Cihaz Konumu (GPS): Yalnızca Kullanıcı'nın konum izni vermesi hâlinde ve uygulama açıkken, Kullanıcı'ya yakın etkinlik ve esnafları listelemek amacıyla anlık sorgu olarak sunucuya iletilir. Bu veri veritabanında kalıcı veya geçici olarak saklanmaz ve arka planda konum alınmaz. Bu durum, veri minimizasyonu ve ölçülülük ilkesinin temel bir taahhüdüdür.
+
+3.3. Kullanıcılar Arası İletişim ve İçerik
+- Özel Mesajlaşma: Kullanıcılar arası mesaj içerikleri ve son mesaj özeti, "özel haberleşmenin gizliliği" esasına dayalı olarak şifrelenmiş biçimde saklanır. Platform, bu içerikler üzerinde keyfi bir denetim veya içerik analizi yapmaz.
+- Gönderi, Yorum, İlan ve Etkinlikler: Kullanıcının alenileştirme iradesi doğrultusunda diğer kullanıcılara açık şekilde yayınlanır. Diğer kullanıcılarca şikayet edilen içerikler, Kullanım Şartları'nın uygulanması amacıyla Platform tarafından incelenebilir.
+
+3.4. Esnaf/İşletme Profilleri
+İşletme sahibi kullanıcıların beyan ettiği telefon numarası, açık adres, işletme adı, kategorisi ve görseli ile işletmenin sabit konumuna ait koordinat bilgisi (enlem/boylam) ticari faaliyetin ifası amacıyla işlenir.
+Ayrıştırma Taahhüdü: İşletme koordinat bilgisi, ticari bir adres verisi olup, Kullanıcı'nın kişisel/canlı GPS verisinden tamamen bağımsızdır ve bu iki veri seti hiçbir şekilde birleştirilerek profilleme yapılamaz.
+
+4. Aydınlatma Yükümlülüğü ve Açık Rıza Mekanizması
+4.1. Süreçlerin Ayrıştırılması: Platform, Aydınlatma Metni'ni, işbu Sözleşme'yi ve Kullanım Şartları'nı ayrı belgeler olarak sunar; Kullanıcı her biri için ayrı kutucuk işaretler. Tek kutucukla tüm onayların alınması ("battaniye rıza") yöntemi kullanılmaz.
+4.2. Hizmet Şartına Bağlamama: Temel platform hizmetlerinin sunulması; profil fotoğrafı paylaşımı, canlı konum izni veya bildirim izni gibi isteğe bağlı veri işleme faaliyetlerine şart koşulamaz. Kullanıcı bu izinleri dilediği zaman, hizmet kaybına uğramadan cihaz ayarlarından geri çekebilir.
+
+5. Verilerin Saklandığı Yer ve Yurt Dışına Aktarım
+Platform'un sunucu ve veritabanı altyapısı Türkiye'de bulunmaktadır.
+Anlık bildirimlerin iletilmesi (Expo, Apple ve Google bildirim altyapıları) ve şifre sıfırlama e-postalarının gönderilmesi (Google Gmail altyapısı) için gerekli olan sınırlı veriler, sunucuları yurt dışında bulunan bu hizmet sağlayıcılar üzerinden iletilir. Bu aktarımlar KVKK m. 9 kapsamında yurt dışına aktarım niteliğindedir; ayrıntıları Aydınlatma Metni'nde açıklanmıştır.
+
+6. Veri Güvenliği, Doğruluk ve İspat Yükümlülüğü
+6.1. Doğruluk ve Kötüye Kullanımın Önlenmesi: Kullanıcı, sisteme girdiği iletişim bilgilerinin (e-posta vb.) doğru ve güncel olduğunu taahhüt eder. Platform, sahte hesapların ve kötüye kullanımın önlenmesi amacıyla şikayet ve engelleme mekanizmaları işletir ve ihlal tespit edilen hesapları askıya alabilir veya kapatabilir.
+6.2. Cihaz Güvenliği: Kullanıcı, kendi kişisel cihazının güvenliğini (antivirüs, şifre gizliliği) sağlamakla yükümlüdür. Kullanıcının cihazına bulaşan zararlı yazılımlar (trojan, phishing vb.) kaynaklı yetkisiz erişimlerden, Platform gerekli teknik tedbirleri almış olması şartıyla sorumlu tutulamaz.
+6.3. Teknik Tedbirler: Platform; şifrelerin hash'lenerek saklanması, özel mesajların şifrelenmesi, sunucuya erişimin yetkiyle sınırlandırılması ve iletişimin şifreli bağlantı (HTTPS) üzerinden yapılması gibi teknik ve idari tedbirleri almayı taahhüt eder.
+
+7. Rekabet Hukuku ve Veri Taşınabilirliği
+7.1. Veri Birleştirme Yasağı: Platform, farklı hizmet modüllerinden (örn. kişisel mesajlaşma ile işletme profilleri) elde ettiği verileri, kullanıcının açık ve ayrıştırılmış rızası olmaksızın birleştirerek rekabeti bozucu bir "kaldıraç etkisi" yaratamaz ve bu verileri üçüncü taraf iştirakleriyle haksız rekabet yaratacak şekilde paylaşamaz.
+7.2. Veri Taşınabilirliği: İşletme/Esnaf profili sahipleri, platforma kendi rızalarıyla yükledikleri adres ve ticari verilerini diledikleri zaman talep etme hakkına sahiptir. Talep hâlinde bu veriler makul bir sürede, yaygın kullanılan bir formatta ve bedelsiz olarak iletilir. Platform, bu hakkın kullanımını zorlaştırıcı münhasırlık şartları ileri süremez.
+
+8. Verilerin Saklanması ve İmhası
+Kişisel veriler, işlenme amaçlarının gerektirdiği süre boyunca ve hesap açık kaldığı sürece saklanır. Kullanıcı hesabını uygulama içinden sildiğinde hesabı ve hesabına bağlı tüm veriler kalıcı olarak silinir. Kanunlardan doğan saklama yükümlülükleri saklıdır.
+
+9. İlgili Kişinin Hakları (KVKK Madde 11)
+Kullanıcı, KVKK'nın 11. maddesi uyarınca; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde/yurt dışında aktarıldığı üçüncü kişileri bilme, eksik/yanlış işlenmişse düzeltilmesini isteme ve verilerin silinmesini/yok edilmesini talep etme haklarına sahiptir. Başvurular merhaba@komsum.app adresi üzerinden gerçekleştirilir.
+
+10. Yürürlük ve Kabul
+İşbu Sözleşme, Kullanıcı tarafından elektronik ortamda onaylandığı tarihte yürürlüğe girmiştir. Kullanıcı, Sözleşme'yi onaylamakla, Sözleşme'de yer alan tüm şartları okuduğunu, anladığını ve kabul ettiğini beyan eder. İşbu Sözleşme'den doğacak uyuşmazlıklarda, Platform'un dijital log kayıtları HMK m. 193 uyarınca kesin delil teşkil edecektir.

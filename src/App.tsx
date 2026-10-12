@@ -4,6 +4,8 @@ import Landing from "./pages/Landing";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import KvkkSozlesmesi from "./pages/KvkkSozlesmesi";
+import HesapSilme from "./pages/HesapSilme";
+import Destek from "./pages/Destek";
 import NotFound from "./pages/NotFound";
 import PageTransitionOverlay from "./components/PageTransitionOverlay";
 import ChatWidget from "./components/ChatWidget";
@@ -26,6 +28,8 @@ export default function App() {
         <Route path="/gizlilik-politikasi" element={<PrivacyPolicy />} />
         <Route path="/kullanim-sartlari" element={<TermsOfUse />} />
         <Route path="/kvkk-sozlesmesi" element={<KvkkSozlesmesi />} />
+        <Route path="/hesap-silme" element={<HesapSilme />} />
+        <Route path="/destek" element={<Destek />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {transitioning && (

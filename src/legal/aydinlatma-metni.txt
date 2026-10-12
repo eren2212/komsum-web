@@ -1,0 +1,30 @@
+SELAMKOMŞU KİŞİSEL VERİLERİN İŞLENMESİNE İLİŞKİN AYDINLATMA METNİ
+
+1. Veri Sorumlusu
+İşbu Aydınlatma Metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla Eren İridere ("SelamKomşu" veya "Platform") tarafından, SelamKomşu mobil uygulaması kullanıcılarının kişisel verilerinin işlenmesine ilişkin usul ve esasların açıklanması amacıyla hazırlanmıştır.
+
+2. İşlenen Kişisel Veriler, İşleme Amaçları ve Hukuki Sebepler
+Platform, kişisel verilerinizi KVKK m. 5 ve 6'da belirtilen aşağıdaki hukuki sebeplere dayalı olarak işlemektedir:
+- Hesap ve Profil Bilgileri (Ad-Soyad, E-posta): Üyeliğin oluşturulması ve hesabın yönetilmesi amacıyla sözleşmenin kurulması ve ifası (m. 5/2-c) kapsamında işlenir.
+- Şifre Bilgisi: Veri güvenliğinin sağlanması amacıyla düz metin olarak tutulmaz; geri döndürülemez biçimde şifrelenmiş (hash'lenmiş) olarak saklanır.
+- Profil Fotoğrafı ve Biyografi: Tamamen isteğe bağlıdır. Kullanıcının kendi isteğiyle sunduğu bu veriler açık rıza (m. 5/1) kapsamında işlenir.
+- Beyan Edilen Konum (Mahalle/İlçe): Kayıtta seçtiğiniz mahalle, bölge bazlı içerik ve bildirim sunulabilmesi için sözleşmenin ifası ve meşru menfaat (m. 5/2-c, f) kapsamında işlenir.
+- Canlı Cihaz Konumu (GPS): Yalnızca konum izni vermeniz hâlinde ve uygulama açıkken kullanılır. Yakınınızdaki etkinlik ve esnafların listelenmesi için anlık sorgu olarak sunucuya iletilir; veritabanına kaydedilmez ve arka planda konum alınmaz. Bu izni dilediğiniz zaman cihaz ayarlarından kaldırabilirsiniz.
+- Paylaşılan İçerikler (Gönderi, Yorum, İlan, Etkinlik ve Fotoğraflar): Kullanıcının alenileştirme iradesi doğrultusunda mahalledeki diğer kullanıcılara gösterilmek üzere sözleşmenin ifası (m. 5/2-c) kapsamında işlenir.
+- Özel Mesajlar: Kullanıcılar arası mesajlaşma hizmetinin sunulması için sözleşmenin ifası (m. 5/2-c) kapsamında işlenir. Mesaj içerikleri sunucuda şifrelenmiş olarak saklanır.
+- Esnaf/İşletme Profil Verileri (Telefon, Adres, İşletme Konumu): Ticari faaliyetin yürütülmesi ve sözleşmenin ifası (m. 5/2-c) kapsamında işlenir.
+- Bildirim Kimliği: Bildirim izni vermeniz hâlinde, anlık bildirim gönderilebilmesi için cihazınızın bildirim kimliği işlenir.
+- Şikayet ve Engelleme Kayıtları: Uygunsuz içeriğin ve kötüye kullanımın önlenmesi amacıyla meşru menfaat (m. 5/2-f) kapsamında işlenir.
+
+3. Verilerin Saklandığı Yer ve Aktarılması
+Platform'un sunucu ve veritabanı altyapısı Türkiye'de bulunmaktadır. Kişisel verileriniz reklam amacıyla üçüncü kişilerle paylaşılmaz ve satılmaz.
+Hizmetin sunulabilmesi için yalnızca aşağıdaki aktarımlar yapılır:
+- Anlık Bildirimler: Bildirim kimliğiniz ile bildirimin başlık ve kısa içeriği, cihazınıza iletilmek üzere Expo (Expo Push Service), Apple (Apple Push Notification service) ve Google (Firebase Cloud Messaging) bildirim altyapıları üzerinden gönderilir.
+- E-posta: Şifre sıfırlama kodları, e-posta adresinize Google (Gmail) e-posta altyapısı üzerinden gönderilir.
+Bu hizmet sağlayıcıların sunucuları yurt dışında bulunduğundan, söz konusu aktarımlar KVKK m. 9 kapsamında yurt dışına aktarım niteliğindedir. Bildirim aktarımı, cihazınızda bildirim izni vermenizle gerçekleşir; izni dilediğiniz zaman cihaz ayarlarından kaldırabilirsiniz.
+
+4. Saklama Süresi
+Kişisel verileriniz hesabınız açık kaldığı sürece saklanır. Hesabınızı uygulama içinden (Profil > Hesabı Sil) sildiğinizde hesabınız ve hesabınıza bağlı tüm veriler kalıcı olarak silinir.
+
+5. İlgili Kişinin Hakları (KVKK m. 11)
+KVKK'nın 11. maddesi uyarınca; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini ve silinmesini isteme haklarına sahipsiniz. Başvurularınızı merhaba@komsum.app adresine iletebilirsiniz.

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import Media from "./Media";
+import { CONTACT_EMAIL } from "../lib/contact";
 
 const LINK_COLS = [
   {
@@ -14,10 +15,11 @@ const LINK_COLS = [
   {
     title: "Kurumsal",
     links: [
-      { label: "İletişim", href: "mailto:merhaba@komsum.app" },
+      { label: "Yardım ve Destek", href: "/destek" },
       { label: "KVKK Aydınlatma Metni", href: "/gizlilik-politikasi" },
       { label: "KVKK Sözleşmesi", href: "/kvkk-sozlesmesi" },
       { label: "Kullanım Şartları", href: "/kullanim-sartlari" },
+      { label: "Hesap Silme", href: "/hesap-silme" },
     ],
   },
 ];
@@ -148,10 +150,10 @@ export default function Footer() {
 
         {/* Giant decorative email */}
         <a
-          href="mailto:merhaba@komsum.app"
+          href={`mailto:${CONTACT_EMAIL}`}
           className="mt-16 block select-none text-center font-display text-[clamp(2rem,11vw,9rem)] leading-none text-text-dark/10 transition-colors hover:text-accent/30"
         >
-          merhaba@komsum.app
+          {CONTACT_EMAIL}
         </a>
 
         <p className="mt-10 text-center text-sm text-text-muted">
