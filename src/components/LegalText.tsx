@@ -72,13 +72,21 @@ export default function LegalText({ text }: { text: string }) {
     if (!line) continue;
 
     if (SECTION_HEADING.test(line) && !line.endsWith(".") && !line.endsWith(":")) {
-      out.push(<h2 key={out.length}>{line}</h2>);
-    } else if (SUB_HEADING.test(line) && !line.endsWith(".")) {
+      // "3. Başlık" → numara rozeti + başlık (içindekiler data-toc'tan okur)
+      const [, num, title] = /^(\d+)\.\s+(.+)$/.exec(line)!;
       out.push(
-        <p key={out.length}>
-          <strong>{line}</strong>
-        </p>,
+        <h2 key={out.length} data-toc={title}>
+          <span className="legal-num" aria-hidden="true">
+            {num}
+          </span>
+          <span>
+            <span className="sr-only">{num}. </span>
+            {title}
+          </span>
+        </h2>,
       );
+    } else if (SUB_HEADING.test(line) && !line.endsWith(".")) {
+      out.push(<h3 key={out.length}>{line}</h3>);
     } else {
       out.push(<p key={out.length}>{withLabel(line)}</p>);
     }

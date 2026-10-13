@@ -5,7 +5,11 @@ import text from "../legal/kullanim-sartlari.txt?raw";
 
 export default function TermsOfUse() {
   return (
-    <LegalPageLayout title="Kullanım Şartları" updatedAt="2026-10-12">
+    <LegalPageLayout
+      title="Kullanım Şartları"
+      description="SelamKomşu'yu güvenli ve saygılı bir komşuluk alanı olarak tutmak için uyduğumuz kurallar."
+      updatedAt="2026-10-12"
+    >
       <LegalText text={text} />
     </LegalPageLayout>
   );

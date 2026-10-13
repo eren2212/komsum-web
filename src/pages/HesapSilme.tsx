@@ -7,14 +7,14 @@ import { CONTACT_EMAIL } from "../lib/contact";
  */
 export default function HesapSilme() {
   return (
-    <LegalPageLayout title="Hesap Silme" updatedAt="2026-10-12">
-      <p>
-        SelamKomşu hesabınızı ve hesabınıza bağlı tüm verileri istediğiniz
-        zaman kalıcı olarak silebilirsiniz.
-      </p>
-
+    <LegalPageLayout
+      eyebrow="Hesap"
+      title="Hesap Silme"
+      description="SelamKomşu hesabınızı ve hesabınıza bağlı tüm verileri istediğiniz zaman kalıcı olarak silebilirsiniz."
+      updatedAt="2026-10-12"
+    >
       <h2>Uygulama içinden silme</h2>
-      <ol className="list-decimal space-y-2 pl-5">
+      <ol>
         <li>SelamKomşu uygulamasını açın ve giriş yapın.</li>
         <li>
           Alttaki menüden <strong>Profil</strong> sekmesine gidin.
@@ -26,7 +26,7 @@ export default function HesapSilme() {
       </ol>
 
       <h2>Uygulamaya erişemiyorsanız</h2>
-      <p>
+      <p className="legal-callout">
         Hesabınıza kayıtlı e-posta adresinizden, konu satırına{" "}
         <strong>"Hesap Silme Talebi"</strong> yazarak{" "}
         <a href={`mailto:${CONTACT_EMAIL}?subject=Hesap%20Silme%20Talebi`}>

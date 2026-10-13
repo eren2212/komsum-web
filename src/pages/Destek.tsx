@@ -5,15 +5,14 @@ import { CONTACT_EMAIL } from "../lib/contact";
 /** App Store Connect'in istediği destek (Support URL) sayfası. */
 export default function Destek() {
   return (
-    <LegalPageLayout title="Yardım ve Destek">
-      <p>
-        SelamKomşu ile ilgili soru, öneri ve şikayetleriniz ile kişisel
-        verilerinize ilişkin talepleriniz için bize ulaşabilirsiniz.
-      </p>
-
+    <LegalPageLayout
+      eyebrow="Destek"
+      title="Yardım ve Destek"
+      description="SelamKomşu ile ilgili soru, öneri ve şikayetleriniz ile kişisel verilerinize ilişkin talepleriniz için bize ulaşabilirsiniz."
+    >
       <h2>İletişim</h2>
-      <p>
-        E-posta: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+      <p className="legal-callout">
+        <strong>E-posta:</strong> <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
       </p>
 
       <h2>Uygunsuz içerik ve kullanıcılar</h2>

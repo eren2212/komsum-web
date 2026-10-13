@@ -7,6 +7,7 @@ export default function KvkkSozlesmesi() {
   return (
     <LegalPageLayout
       title="Kişisel Verilerin Korunması ve İşlenmesi Sözleşmesi"
+      description="SelamKomşu ile kullanıcı arasında, kişisel verilerin işlenmesine ilişkin karşılıklı hak ve yükümlülükleri belirleyen sözleşme."
       updatedAt="2026-10-12"
     >
       <LegalText text={text} />
