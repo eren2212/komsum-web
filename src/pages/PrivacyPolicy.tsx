@@ -7,8 +7,14 @@ export default function PrivacyPolicy() {
   return (
     <LegalPageLayout
       title="KVKK Aydınlatma Metni"
-      description="SelamKomşu'yu kullanırken hangi kişisel verilerinizin, neden ve nasıl işlendiğini; nerede saklandığını ve haklarınızı açıklar."
       updatedAt="2026-10-12"
+      version={3}
+      summary={[
+        "Verilerini satmıyoruz, reklam için kimseyle paylaşmıyoruz.",
+        "Sunucularımız Türkiye'de. Yurt dışına yalnızca bildirim ve şifre sıfırlama e-postası için gereken kadar veri gider.",
+        "Canlı konumun sadece uygulama açıkken, yakınındakileri bulmak için kullanılır; kaydedilmez.",
+        "Mesajların şifreli saklanır. Hesabını sildiğinde her şey kalıcı olarak silinir.",
+      ]}
     >
       <LegalText text={text} />
     </LegalPageLayout>

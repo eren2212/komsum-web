@@ -72,19 +72,10 @@ export default function LegalText({ text }: { text: string }) {
     if (!line) continue;
 
     if (SECTION_HEADING.test(line) && !line.endsWith(".") && !line.endsWith(":")) {
-      // "3. Başlık" → numara rozeti + başlık (içindekiler data-toc'tan okur)
-      const [, num, title] = /^(\d+)\.\s+(.+)$/.exec(line)!;
-      out.push(
-        <h2 key={out.length} data-toc={title}>
-          <span className="legal-num" aria-hidden="true">
-            {num}
-          </span>
-          <span>
-            <span className="sr-only">{num}. </span>
-            {title}
-          </span>
-        </h2>,
-      );
+      // "3. Başlık" → sadece başlık; "§ 03" numarasını CSS sayacı üretir
+      // (bölümler metinde zaten sıralı). İçindekiler de h2'lerden okunur.
+      const title = line.replace(/^\d+\.\s+/, "");
+      out.push(<h2 key={out.length}>{title}</h2>);
     } else if (SUB_HEADING.test(line) && !line.endsWith(".")) {
       out.push(<h3 key={out.length}>{line}</h3>);
     } else {

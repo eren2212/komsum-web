@@ -5,12 +5,17 @@ import Footer from "./Footer";
 
 type LegalPageLayoutProps = {
   title: string;
-  /** Başlığın üstündeki küçük etiket. */
-  eyebrow?: string;
-  /** Başlığın altındaki kısa açıklama. */
-  description?: string;
-  /** ISO date string, e.g. "2026-08-05" — shown as "Son güncelleme". */
+  /** Başlığın üstündeki daktilo etiketi, örn. "Yasal Metin". */
+  kicker?: string;
+  /** ISO date string, e.g. "2026-08-05" — "Yürürlük" olarak gösterilir. */
   updatedAt?: string;
+  /** Metnin sürümü (uygulamada onaylatılan sürümle aynı). */
+  version?: number;
+  /**
+   * "Kısacası": metnin ne dediğini sade dille anlatan birkaç cümle.
+   * Bağlayıcı değildir; bağlayıcı olan tam metindir (sayfada da yazar).
+   */
+  summary?: string[];
   children: ReactNode;
 };
 
@@ -28,143 +33,123 @@ const slugify = (text: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
+const pad = (n: number) => String(n).padStart(2, "0");
+
+const formatDate = (iso: string) => {
+  const d = new Date(iso);
+  return `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${d.getFullYear()}`;
+};
+
 /**
  * Shared shell for static legal/info pages (KVKK, Kullanım Şartları, Hesap
- * Silme, Destek). Deliberately lighter than the landing page's Navbar — no
- * scroll-jacked sections, just a readable article with a sticky table of
- * contents built from the article's own <h2>s.
+ * Silme, Destek). Basılı bir belge gibi: markanın turuncusuyla bir başlık
+ * şeridi, sade dille "Kısacası" özeti, en üstte düz bir içindekiler listesi ve
+ * kenar boşluğunda daktilo yazısıyla bölüm numaraları (.legal-prose, index.css).
  */
 export default function LegalPageLayout({
   title,
-  eyebrow = "Yasal",
-  description,
+  kicker = "Yasal Metin",
   updatedAt,
+  version,
+  summary,
   children,
 }: LegalPageLayoutProps) {
   const articleRef = useRef<HTMLElement>(null);
   const [toc, setToc] = useState<TocItem[]>([]);
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const [readingMinutes, setReadingMinutes] = useState<number | null>(null);
 
-  // İçindekiler + okuma süresi: makalenin kendi başlıklarından üretilir.
+  // İçindekiler makalenin kendi <h2>'lerinden üretilir.
   useEffect(() => {
     const article = articleRef.current;
     if (!article) return;
-
-    const headings = Array.from(article.querySelectorAll("h2"));
-    const items = headings.map((h, i) => {
-      const label = h.dataset.toc ?? h.textContent ?? "";
+    const items = Array.from(article.querySelectorAll("h2")).map((h, i) => {
+      const label = h.textContent ?? "";
       if (!h.id) h.id = slugify(label) || `bolum-${i + 1}`;
       return { id: h.id, label };
     });
     setToc(items);
-
-    const words = (article.textContent ?? "").trim().split(/\s+/).length;
-    setReadingMinutes(Math.max(1, Math.round(words / 200)));
-
-    // Okunan bölümü vurgula
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible[0]) setActiveId(visible[0].target.id);
-      },
-      { rootMargin: "0px 0px -70% 0px" },
-    );
-    headings.forEach((h) => observer.observe(h));
-    return () => observer.disconnect();
   }, [children]);
 
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    setActiveId(id);
-  };
+  const meta = [
+    updatedAt && `Yürürlük ${formatDate(updatedAt)}`,
+    version && `Sürüm ${version}`,
+  ].filter(Boolean);
 
   return (
-    <div className="flex min-h-screen flex-col bg-bg-cream">
-      <header className="px-6 pt-8">
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <Link to="/" aria-label="Ana sayfa">
-            <Logo />
-          </Link>
-          <Link
-            to="/"
-            className="rounded-full bg-white/70 px-4 py-2 text-sm font-medium text-text-dark transition-colors hover:bg-white hover:text-accent"
-          >
-            ← Ana sayfa
-          </Link>
+    <div className="flex min-h-screen flex-col bg-bg-light">
+      {/* ── Başlık şeridi ── */}
+      <header className="bg-accent px-6 pb-14 pt-8 text-text-dark sm:pb-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="flex items-center justify-between">
+            <Link to="/" aria-label="Ana sayfa">
+              <Logo markColor="#141414" />
+            </Link>
+            <Link to="/" className="legal-mono underline-offset-4 hover:underline">
+              ← Ana sayfa
+            </Link>
+          </div>
+
+          <p className="legal-mono mt-16 sm:mt-24">{kicker}</p>
+          <h1 className="display-chunky mt-4 max-w-4xl text-[clamp(2.6rem,7.5vw,5.75rem)]">
+            {title}
+          </h1>
+          {meta.length > 0 && (
+            <p className="legal-mono mt-8 border-t border-text-dark pt-4">{meta.join("  ·  ")}</p>
+          )}
         </div>
       </header>
 
-      {/* ── Başlık ── */}
-      <section className="px-6 pb-10 pt-16 sm:pt-20">
-        <div className="mx-auto max-w-6xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-            {eyebrow}
-          </span>
-          <h1 className="display-chunky mt-5 max-w-4xl text-[clamp(2.25rem,6vw,4.25rem)] text-text-dark">
-            {title}
-          </h1>
-          {description && (
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-text-dark/70">{description}</p>
+      <main className="flex-1 px-6 pb-28">
+        <div className="mx-auto max-w-5xl lg:pl-28">
+          {/* ── Kısacası ── */}
+          {summary && summary.length > 0 && (
+            <section className="pt-14 sm:pt-20" aria-labelledby="kisacasi">
+              <h2 id="kisacasi" className="legal-mono text-accent">
+                Kısacası
+              </h2>
+              <ol className="mt-6 divide-y divide-text-dark/15 border-y border-text-dark">
+                {summary.map((item, i) => (
+                  <li key={i} className="flex gap-5 py-4 sm:gap-8">
+                    <span className="legal-mono pt-1.5 text-text-dark/50">{pad(i + 1)}</span>
+                    <span className="text-[1.15rem] font-medium leading-snug text-text-dark sm:text-[1.3rem]">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-3 text-sm text-text-dark/55">
+                Bu özet okumayı kolaylaştırmak içindir; bağlayıcı olan aşağıdaki tam metindir.
+              </p>
+            </section>
           )}
-          {(updatedAt || readingMinutes) && (
-            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-text-dark/60">
-              {updatedAt && (
-                <span>
-                  Son güncelleme:{" "}
-                  <span className="font-medium text-text-dark/80">
-                    {new Date(updatedAt).toLocaleDateString("tr-TR", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })}
-                  </span>
-                </span>
-              )}
-              {updatedAt && readingMinutes && <span aria-hidden="true">·</span>}
-              {readingMinutes && <span>{readingMinutes} dk okuma</span>}
-            </div>
-          )}
-        </div>
-      </section>
 
-      {/* ── İçerik ── */}
-      <main className="flex-1 px-4 pb-24 sm:px-6">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[240px_minmax(0,1fr)]">
-          <aside className="hidden lg:block">
-            {toc.length > 1 && (
-              <nav className="sticky top-8" aria-label="Bu sayfada">
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-dark/50">
-                  Bu sayfada
-                </p>
-                <ul className="space-y-1 border-l border-black/10">
-                  {toc.map((item) => (
-                    <li key={item.id}>
-                      <button
-                        type="button"
-                        onClick={() => scrollTo(item.id)}
-                        className={`-ml-px block w-full border-l-2 py-1.5 pl-4 text-left text-sm leading-snug transition-colors ${
-                          activeId === item.id
-                            ? "border-accent font-medium text-text-dark"
-                            : "border-transparent text-text-dark/55 hover:text-text-dark"
-                        }`}
-                      >
+          {/* ── İçindekiler ── */}
+          {toc.length > 1 && (
+            <nav className="pt-14" aria-label="İçindekiler">
+              <p className="legal-mono text-text-dark/50">İçindekiler</p>
+              <ol className="mt-4 grid gap-x-10 gap-y-2 sm:grid-cols-2">
+                {toc.map((item, i) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+                      }}
+                      className="group flex gap-4 text-[0.95rem] text-text-dark"
+                    >
+                      <span className="legal-mono pt-1 text-accent">{pad(i + 1)}</span>
+                      <span className="underline decoration-transparent decoration-2 underline-offset-4 transition-colors group-hover:decoration-accent">
                         {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            )}
-          </aside>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
 
-          <article
-            ref={articleRef}
-            className="legal-prose rounded-[2rem] bg-white px-6 py-10 shadow-[0_1px_0_rgba(0,0,0,0.04)] sm:px-12 sm:py-14"
-          >
+          {/* ── Tam metin ── */}
+          <article ref={articleRef} className="legal-prose pt-16">
             {children}
           </article>
         </div>

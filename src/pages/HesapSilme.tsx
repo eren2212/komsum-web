@@ -8,10 +8,14 @@ import { CONTACT_EMAIL } from "../lib/contact";
 export default function HesapSilme() {
   return (
     <LegalPageLayout
-      eyebrow="Hesap"
+      kicker="Hesap"
       title="Hesap Silme"
-      description="SelamKomşu hesabınızı ve hesabınıza bağlı tüm verileri istediğiniz zaman kalıcı olarak silebilirsiniz."
       updatedAt="2026-10-12"
+      summary={[
+        "Hesabını ve hesabına bağlı tüm verileri istediğin zaman kalıcı olarak silebilirsin.",
+        "En hızlı yol uygulamanın içinden: Profil > Hesabı Sil.",
+        "Uygulamaya erişemiyorsan bize e-postayla yaz, 30 gün içinde sileriz.",
+      ]}
     >
       <h2>Uygulama içinden silme</h2>
       <ol>

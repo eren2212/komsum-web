@@ -6,10 +6,13 @@ import { CONTACT_EMAIL } from "../lib/contact";
 export default function Destek() {
   return (
     <LegalPageLayout
-      eyebrow="Destek"
+      kicker="Destek"
       title="Yardım ve Destek"
-      description="SelamKomşu ile ilgili soru, öneri ve şikayetleriniz ile kişisel verilerinize ilişkin talepleriniz için bize ulaşabilirsiniz."
     >
+      <p>
+        SelamKomşu ile ilgili soru, öneri ve şikayetleriniz ile kişisel
+        verilerinize ilişkin talepleriniz için bize ulaşabilirsiniz.
+      </p>
       <h2>İletişim</h2>
       <p className="legal-callout">
         <strong>E-posta:</strong> <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
