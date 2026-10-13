@@ -29,7 +29,7 @@ export default function Navbar() {
         animate={{ maxWidth: active ? 460 : 768 }}
         transition={{ type: "spring", stiffness: 260, damping: 30 }}
       >
-        <a href="#hero" className="shrink-0" aria-label="Komşum ana sayfa">
+        <a href="#hero" className="shrink-0" aria-label="SelamKomşu ana sayfa">
           <Logo />
         </a>
 

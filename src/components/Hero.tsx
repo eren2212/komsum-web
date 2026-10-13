@@ -147,7 +147,7 @@ export default function Hero() {
           {/* Hand + phone photo underneath */}
           <Media
             src="/mockups/hand-phone.png"
-            alt="Komşum uygulamasını tutan el"
+            alt="SelamKomşu uygulamasını tutan el"
             className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-contain"
             label="hand-phone.png"
           />
@@ -158,7 +158,7 @@ export default function Hero() {
               mask feathers it out instead of hard-cutting mid-element. */}
           <Media
             src="/mockups/hero-screen.png"
-            alt="Komşum uygulaması ekran görüntüsü"
+            alt="SelamKomşu uygulaması ekran görüntüsü"
             className="absolute z-10 overflow-hidden rounded-[24px] object-cover"
             style={{
               ...SCREEN,

@@ -4,7 +4,7 @@ type LogoProps = {
   markColor?: string;
 };
 
-/** Komşum wordmark: a little house/pin mark + the name. */
+/** SelamKomşu wordmark: a little house/pin mark + the name. */
 export default function Logo({ className = "", markColor }: LogoProps) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
@@ -21,7 +21,7 @@ export default function Logo({ className = "", markColor }: LogoProps) {
         />
         <circle cx="16" cy="11.5" r="2.4" fill="#fff" />
       </svg>
-      <span className="font-display text-[1.35rem] leading-none">Komşum</span>
+      <span className="font-display text-[1.35rem] leading-none">SelamKomşu</span>
     </span>
   );
 }

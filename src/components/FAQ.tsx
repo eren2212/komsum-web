@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const FAQS = [
   {
-    q: "Komşum ücretsiz mi?",
+    q: "SelamKomşu ücretsiz mi?",
     a: "Evet, temel özelliklerin tamamı ücretsizdir. Yerel işletmeler için ek özellikler ileride sunulabilir.",
   },
   {
@@ -11,7 +11,7 @@ const FAQS = [
   },
   {
     q: "Verilerim güvende mi?",
-    a: "Komşum kapalı bir ağdır; sadece doğrulanmış komşular birbirini görür. Mesajlaşma uçtan uca güvenlidir.",
+    a: "SelamKomşu kapalı bir ağdır; sadece doğrulanmış komşular birbirini görür. Mesajlaşma uçtan uca güvenlidir.",
   },
   {
     q: "Esnaf/usta olarak kayıt olabilir miyim?",

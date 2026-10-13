@@ -14,7 +14,7 @@ const SEND_COOLDOWN_MS = 1000;
 const GREETING: ChatMessage = {
   id: "greeting",
   role: "model",
-  text: "Merhaba! Ben Komşum'un dijital komşusuyum 👋 Uygulama hakkında merak ettiğin bir şey var mı?",
+  text: "Merhaba! Ben SelamKomşu'nun dijital komşusuyum 👋 Uygulama hakkında merak ettiğin bir şey var mı?",
 };
 
 function loadHistory(): ChatMessage[] {
@@ -104,13 +104,13 @@ export default function ChatWidget() {
       {isOpen && (
         <div
           role="dialog"
-          aria-label="Komşum sohbet asistanı"
+          aria-label="SelamKomşu sohbet asistanı"
           className="mb-3 flex h-[70vh] max-h-[520px] w-[calc(100vw-2rem)] max-w-sm flex-col overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-black/5"
         >
           {/* Header */}
           <div className="flex items-center justify-between bg-bg-dark px-5 py-4 text-white">
             <div>
-              <p className="font-display text-lg leading-none">Komşum Asistanı</p>
+              <p className="font-display text-lg leading-none">SelamKomşu Asistanı</p>
               <p className="mt-1 text-xs text-white/80">Genelde birkaç saniyede yanıtlar</p>
             </div>
             <div className="flex items-center gap-1">

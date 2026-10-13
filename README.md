@@ -1,6 +1,6 @@
-# Komşum — Tanıtım Sitesi
+# SelamKomşu — Tanıtım Sitesi
 
-"Komşum" mobil uygulamasının scroll-animasyon ağırlıklı, tek sayfalık tanıtım
+"SelamKomşu" mobil uygulamasının scroll-animasyon ağırlıklı, tek sayfalık tanıtım
 sitesi. Umano Design Studio yapısı referans alınarak; kapsül navbar, pinned
 yatay kaydırma, kelime kelime aydınlanan metin ve smooth scroll ile.
 
@@ -44,7 +44,7 @@ gerisi otomatik uyar.
 | `StickyPhone` | Sabitlenen telefon; scroll'da içindeki 4 ekran sırayla değişir |
 | `RevealText` | Scroll ile kelime kelime gri → siyah aydınlanan paragraf + basın logoları |
 | `HorizontalCards` | ⭐ Pinned yatay kaydırma, 5 özellik kartı (mobilde swipe carousel) |
-| `BrandMoment` | Açık → koyu geçiş; ekranı dolduran Komşum logosu |
+| `BrandMoment` | Açık → koyu geçiş; ekranı dolduran SelamKomşu logosu |
 | `ClientStories` | Koyu zemin, 3 eğik hikaye kartı, hover'da düzleşir |
 | `FAQ` | Accordion; açık soru vurgu renginde, `+/−` ikonu |
 | `Footer` | Yeşil marka kartı + bağlantılar + mağaza rozetleri + dev e-posta tipografisi |

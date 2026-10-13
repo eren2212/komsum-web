@@ -157,7 +157,7 @@ export default function Footer() {
         </a>
 
         <p className="mt-10 text-center text-sm text-text-muted">
-          © 2026 Komşum. Tüm hakları saklıdır.
+          © 2026 SelamKomşu. Tüm hakları saklıdır.
         </p>
       </div>
     </footer>

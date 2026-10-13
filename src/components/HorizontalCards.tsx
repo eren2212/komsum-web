@@ -142,7 +142,7 @@ export default function HorizontalCards() {
       tl.to(track, { x: () => -getHoriz(), ease: "none", duration: horiz }, 0);
 
       // Phase 2 — dive into the last card. It grows from its icon, its text
-      // clears, the message icon morphs into the Komşum house mark, and a dark
+      // clears, the message icon morphs into the SelamKomşu house mark, and a dark
       // layer rises to land seamlessly on the bg-dark ClientStories section.
       tl.to(headingRef.current, { autoAlpha: 0, duration: zoom * 0.15 }, horiz)
         .to(
@@ -191,7 +191,7 @@ export default function HorizontalCards() {
           className="px-6 pb-10 md:absolute md:left-1/2 md:top-16 md:z-20 md:-translate-x-1/2 md:px-0 md:text-center"
         >
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-            Komşum ile neler yapabilirsin?
+            SelamKomşu ile neler yapabilirsin?
           </span>
           <h2 className="display-chunky mt-2 text-[clamp(2rem,5vw,3.25rem)] text-text-dark">
             Mahallenin her şeyi, tek akışta.
@@ -274,7 +274,7 @@ export default function HorizontalCards() {
   );
 }
 
-/** Komşum house mark — the icon you dive into (matches Logo). */
+/** SelamKomşu house mark — the icon you dive into (matches Logo). */
 function HouseMark() {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" className="h-full w-full">

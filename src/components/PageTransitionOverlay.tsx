@@ -95,9 +95,9 @@ export default function PageTransitionOverlay({
     >
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 flex select-none items-center justify-center whitespace-nowrap font-display text-[clamp(4rem,22vw,14rem)] leading-none text-text-dark/[0.06]"
+        className="pointer-events-none absolute inset-0 flex select-none items-center justify-center whitespace-nowrap font-display text-[clamp(3rem,13vw,9rem)] leading-none text-text-dark/[0.06]"
       >
-        Komşum
+        SelamKomşu
       </span>
 
       <div className="relative h-1.5 w-56 overflow-visible rounded-full bg-black/10 sm:w-72">

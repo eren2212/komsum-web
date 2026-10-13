@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { prefersReducedMotion } from "../lib/useSmoothScroll";
 
 const PARAGRAPH =
-  "Güvenilir bir komşu bulmak zaman alır. Komşum ile saniyeler sürer. Doğrulanmış üyeler. Kapalı mahalle ağı. Gerçek dayanışma. Tek uygulamada.";
+  "Güvenilir bir komşu bulmak zaman alır. SelamKomşu ile saniyeler sürer. Doğrulanmış üyeler. Kapalı mahalle ağı. Gerçek dayanışma. Tek uygulamada.";
 
 const LOGOS = ["Mahalle Postası", "Yerel Haber", "Şehir Gündem", "Komşu Times", "Pazar FM"];
 
