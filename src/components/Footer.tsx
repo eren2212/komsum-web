@@ -20,6 +20,7 @@ const LINK_COLS = [
       { label: "KVKK Sözleşmesi", href: "/kvkk-sozlesmesi" },
       { label: "Kullanım Şartları", href: "/kullanim-sartlari" },
       { label: "Hesap Silme", href: "/hesap-silme" },
+      { label: "Çocuk Güvenliği", href: "/cocuk-guvenligi" },
     ],
   },
 ];

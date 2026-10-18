@@ -6,6 +6,7 @@ import TermsOfUse from "./pages/TermsOfUse";
 import KvkkSozlesmesi from "./pages/KvkkSozlesmesi";
 import HesapSilme from "./pages/HesapSilme";
 import Destek from "./pages/Destek";
+import CocukGuvenligi from "./pages/CocukGuvenligi";
 import NotFound from "./pages/NotFound";
 import PageTransitionOverlay from "./components/PageTransitionOverlay";
 import ChatWidget from "./components/ChatWidget";
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/kvkk-sozlesmesi" element={<KvkkSozlesmesi />} />
         <Route path="/hesap-silme" element={<HesapSilme />} />
         <Route path="/destek" element={<Destek />} />
+        <Route path="/cocuk-guvenligi" element={<CocukGuvenligi />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {transitioning && (
