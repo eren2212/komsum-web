@@ -10,7 +10,7 @@ export default function HesapSilme() {
     <LegalPageLayout
       kicker="Hesap"
       title="Hesap Silme"
-      updatedAt="2026-10-12"
+      updatedAt="2026-10-27"
       summary={[
         "Hesabını ve hesabına bağlı tüm verileri istediğin zaman kalıcı olarak silebilirsin.",
         "En hızlı yol uygulamanın içinden: Profil > Hesabı Sil.",

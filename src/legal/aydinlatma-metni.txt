@@ -27,4 +27,4 @@ Bu hizmet sağlayıcıların sunucuları yurt dışında bulunduğundan, söz ko
 Kişisel verileriniz hesabınız açık kaldığı sürece saklanır. Hesabınızı uygulama içinden (Profil > Hesabı Sil) sildiğinizde hesabınız ve hesabınıza bağlı tüm veriler kalıcı olarak silinir.
 
 5. İlgili Kişinin Hakları (KVKK m. 11)
-KVKK'nın 11. maddesi uyarınca; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini ve silinmesini isteme haklarına sahipsiniz. Başvurularınızı merhaba@komsum.app adresine iletebilirsiniz.
+KVKK'nın 11. maddesi uyarınca; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini ve silinmesini isteme haklarına sahipsiniz. Başvurularınızı appereniridere@gmail.com adresine iletebilirsiniz.

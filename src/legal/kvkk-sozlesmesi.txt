@@ -48,7 +48,7 @@ Anlık bildirimlerin iletilmesi (Expo, Apple ve Google bildirim altyapıları) v
 Kişisel veriler, işlenme amaçlarının gerektirdiği süre boyunca ve hesap açık kaldığı sürece saklanır. Kullanıcı hesabını uygulama içinden sildiğinde hesabı ve hesabına bağlı tüm veriler kalıcı olarak silinir. Kanunlardan doğan saklama yükümlülükleri saklıdır.
 
 9. İlgili Kişinin Hakları (KVKK Madde 11)
-Kullanıcı, KVKK'nın 11. maddesi uyarınca; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde/yurt dışında aktarıldığı üçüncü kişileri bilme, eksik/yanlış işlenmişse düzeltilmesini isteme ve verilerin silinmesini/yok edilmesini talep etme haklarına sahiptir. Başvurular merhaba@komsum.app adresi üzerinden gerçekleştirilir.
+Kullanıcı, KVKK'nın 11. maddesi uyarınca; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde/yurt dışında aktarıldığı üçüncü kişileri bilme, eksik/yanlış işlenmişse düzeltilmesini isteme ve verilerin silinmesini/yok edilmesini talep etme haklarına sahiptir. Başvurular appereniridere@gmail.com adresi üzerinden gerçekleştirilir.
 
 10. Yürürlük ve Kabul
 İşbu Sözleşme, Kullanıcı tarafından elektronik ortamda onaylandığı tarihte yürürlüğe girmiştir. Kullanıcı, Sözleşme'yi onaylamakla, Sözleşme'de yer alan tüm şartları okuduğunu, anladığını ve kabul ettiğini beyan eder. İşbu Sözleşme'den doğacak uyuşmazlıklarda, Platform'un dijital log kayıtları HMK m. 193 uyarınca kesin delil teşkil edecektir.

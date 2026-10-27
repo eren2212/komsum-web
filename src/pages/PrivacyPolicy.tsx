@@ -7,8 +7,8 @@ export default function PrivacyPolicy() {
   return (
     <LegalPageLayout
       title="KVKK Aydınlatma Metni"
-      updatedAt="2026-10-12"
-      version={3}
+      updatedAt="2026-10-27"
+      version={4}
       summary={[
         "Verilerini satmıyoruz, reklam için kimseyle paylaşmıyoruz.",
         "Sunucularımız Türkiye'de. Yurt dışına yalnızca bildirim ve şifre sıfırlama e-postası için gereken kadar veri gider.",

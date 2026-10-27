@@ -7,8 +7,8 @@ export default function TermsOfUse() {
   return (
     <LegalPageLayout
       title="Kullanım Şartları"
-      updatedAt="2026-10-12"
-      version={2}
+      updatedAt="2026-10-27"
+      version={3}
       summary={[
         "SelamKomşu'yu kullanmak için 18 yaşından büyük olmalısın.",
         "Hakaret, taciz, dolandırıcılık ve uygunsuz içeriğe sıfır tolerans.",

@@ -7,8 +7,8 @@ export default function KvkkSozlesmesi() {
   return (
     <LegalPageLayout
       title="Kişisel Verilerin Korunması ve İşlenmesi Sözleşmesi"
-      updatedAt="2026-10-12"
-      version={3}
+      updatedAt="2026-10-27"
+      version={4}
       summary={[
         "Verilerinin hangi kurallarla işlendiğini ve hangi haklara sahip olduğunu bu sözleşme belirler.",
         "Profil fotoğrafı, canlı konum ve bildirim tamamen isteğe bağlı; kapatsan da uygulamayı kullanmaya devam edersin.",

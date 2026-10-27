@@ -10,7 +10,7 @@ export default function CocukGuvenligi() {
     <LegalPageLayout
       kicker="Güvenlik"
       title="Çocuk Güvenliği Standartları"
-      updatedAt="2026-10-18"
+      updatedAt="2026-10-27"
       summary={[
         "SelamKomşu, çocukların cinsel istismarına ve istismar içeriğine karşı sıfır tolerans uygular.",
         "Uygulama 18 yaş ve üzeri kullanıcılar içindir.",
